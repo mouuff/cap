@@ -124,7 +124,7 @@ end
 
 function ENT:FindNearest(address)
 if address=="" or not address then
-	local dist=999999999999999 -- lolwut
+	local dist=7000 -- thats a bot less than planets distance on forlon
 	local nEnt=self.Entity
 	local rings=ents.FindByClass("ring_base_*")
 		for i=1,table.getn(rings) do
@@ -353,7 +353,7 @@ function ENT:DoRings()
 	self:Anim(false);
 
 	local dir = 1;
-	-- Addtion by aVoN: Use "FindRange" everytime we are facing down and the angle is below 45° (pi/4)
+	-- Addtion by aVoN: Use "FindRange" everytime we are facing down and the angle is below 45ï¿½ (pi/4)
 	if(self.Entity:GetUp():DotProduct(Vector(0,0,-1)) > 1/math.sqrt(2)) then
 		--self.SetRange = 1024;
 		dir = -1;
